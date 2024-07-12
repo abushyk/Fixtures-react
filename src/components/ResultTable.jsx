@@ -8,6 +8,8 @@ export default function ResultTable({
     sortFixtures,
     showMatches,
 }) {
+    console.log('Render ResultTable');
+    
     return (
         <>
             <Table responsive striped bordered hover className="result-table">
@@ -57,9 +59,11 @@ export default function ResultTable({
                             <tr key={item.id}>
                                 <td>{item.position}</td>
                                 <td>
-                                    {item.name} [{item.id}]
+                                    {item.name}
                                 </td>
-                                <td>{item.games}</td>
+                                <td onClick={() =>
+                                        showMatches(item.id, "m")
+                                    }>{item.games}</td>
                                 <td
                                     onClick={() => showMatches(item.id, "wins")}
                                     className="num"
@@ -82,10 +86,18 @@ export default function ResultTable({
                                 >
                                     {item.loses}
                                 </td>
-                                <td>{item.gf}</td>
-                                <td>{item.ga}</td>
+                                <td onClick={() =>
+                                        showMatches(item.id, "gf")
+                                    }
+                                    className="num">{item.gf}</td>
+                                <td onClick={() =>
+                                        showMatches(item.id, "ga")
+                                    }
+                                    className="num">{item.ga}</td>
                                 <td>{item.gdiff}</td>
-                                <td>{item.pts}</td>
+                                <td onClick={() =>
+                                        showMatches(item.id, "pts")
+                                    }>{item.pts}</td>
                                 <td>
                                     {
                                         item.last.map((it, i) => <MatchIcon key={i} item={it} />)

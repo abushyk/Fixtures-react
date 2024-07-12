@@ -1,4 +1,5 @@
 export default function TeamList({ items }) {
+    console.log('Render TeamList');
     return (
         <>
             <div className="card">

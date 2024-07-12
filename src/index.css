@@ -23,6 +23,8 @@
     filter: alpha(opacity = 99);
     opacity: 0.99;
     display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .result-table .match-icon.match-icon-d {
@@ -35,4 +37,9 @@
 
 .result-table .match-icon.match-icon-l {
     background: red;
+}
+
+td.num {
+    width: 45px;
+    text-align: center;
 }

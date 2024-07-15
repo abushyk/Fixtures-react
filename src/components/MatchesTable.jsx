@@ -1,5 +1,6 @@
 import Table from "react-bootstrap/Table";
 function MatchesTable({ selectedMatches, teamNames }) {
+    console.log('Render MatchesTable');
     return (
         <>
             <Table responsive striped bordered hover className="matches-table">

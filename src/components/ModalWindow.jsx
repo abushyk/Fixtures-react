@@ -3,6 +3,8 @@ import MatchesTable from "./MatchesTable";
 
 export default function ModalWindow({modalInfo, handleClose, teamNames}){
     console.log('Render ModalWindow');
+
+    
     return (
         <Modal show={modalInfo.show} onHide={handleClose}>
             <Modal.Header closeButton>

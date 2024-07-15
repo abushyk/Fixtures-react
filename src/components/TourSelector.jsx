@@ -1,4 +1,16 @@
-export default function TourSelector({showedTour, changeTourSelect, tours}){
+import { useState } from "react";
+
+export default function TourSelector({currentTour, tourChanged, tours}){
+
+    // Текущий тур
+    const [showedTour, setShowedTour] = useState(currentTour);
+
+    const changeTourSelect = (event) => {
+        let tour = event.target.value;
+        setShowedTour(tour);
+        tourChanged(tour);
+    }
+    
     console.log('Render TourSelector');
     return (
         <div>
